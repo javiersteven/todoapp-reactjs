@@ -1,5 +1,6 @@
 {
-  "name": "todo-app2",
+  "name": "todo-app",
+  "author": "j4viersteven",
   "version": "0.1.0",
   "private": true,
   "dependencies": {

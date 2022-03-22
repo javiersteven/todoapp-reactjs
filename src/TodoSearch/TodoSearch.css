@@ -1,0 +1,9 @@
+input {
+    border: 1px dotted #999;
+    border-radius: 0;
+    font-family : inherit;
+    font-size: 100%;
+    max-width: 70%;
+    height: 30px;
+    text-align: center;
+}
