@@ -1,0 +1,27 @@
+.btn {
+    border: 2px solid #ECECED;
+    width: 60px;
+    height: 60px;
+    border-radius: 30px;
+    font-size: 30px;
+    background-color: #1C73D3;
+    color: #ECECED;
+    cursor: pointer;
+    box-shadow: 0 0 10px 3px grey;
+
+    /* Fixed derecha-abajo */
+    position: fixed;
+    bottom: 24px;
+    right: 24px;
+
+    /* Animaciones */
+    transform: rotate(0);
+    transition: .3s ease;
+}
+
+.btn:hover {
+    background-color: #FFF;
+    border: 2px solid #1C73D3;
+    color: #1C73D3;
+    transform: rotate(224deg);
+}
