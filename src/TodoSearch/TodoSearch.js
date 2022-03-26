@@ -1,17 +1,22 @@
 import { React } from 'react'
 import './TodoSearch.css'
 
-const TodoSearch = ({search, setSearch}) => {
+const TodoSearch = ({ search, setSearch }) => {
 
     const handleOnChange = (e) => {
         setSearch(e.target.value)
     }
     return (
-        <input
-            placeholder="Search 🔎"
-            onChange={handleOnChange}
-            value={search}
-        />
+        <div className="todoSearchWraper">
+            <div className="todoSearch" >
+                <span>🔎</span>
+                <input
+                    placeholder="Search"
+                    onChange={handleOnChange}
+                    value={search}
+                />
+            </div>
+        </div>
     )
 }
 

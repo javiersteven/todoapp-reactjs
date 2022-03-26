@@ -1,9 +1,9 @@
 .btn {
     border: 2px solid #ECECED;
-    width: 60px;
-    height: 60px;
-    border-radius: 30px;
-    font-size: 30px;
+    width: 70px;
+    height: 70px;
+    border-radius: 35px;
+    font-size: 2.5rem;
     background-color: #1C73D3;
     color: #ECECED;
     cursor: pointer;

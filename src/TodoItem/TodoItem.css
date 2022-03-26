@@ -2,12 +2,20 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 400px;
-
+    width: 380px;
+    margin: 10px;
+    padding: 10px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(1, 1, 1, .8)
 }
+
 .TodoItem p {
     height: auto;
+    width: 100%;
+    font-size: 18px;
+
 }
+
 .Icon {
     cursor: pointer;
     display: flex;
@@ -17,14 +25,10 @@
     width: 48px;
     font-size: 24px;
     font-weight: bold;
+    margin: 2px 20px ;
+    padding: 2px;
 }
 
 .Icon--active {
     text-decoration: line-through;
-}
-
-.TodoItem--p {
-    margin: 24px 0 24px 24px;
-    width: 100%;
-    font-size: 18px;
 }

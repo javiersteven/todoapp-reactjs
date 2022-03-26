@@ -1,3 +1,11 @@
-.header-title {
+.title {
+    display: flex;
+    height: auto;
+    align-items: center;
+    padding: 15px;
+    justify-content: space-around;
+    background-color: #1C73D3;
     text-align: center;
+    font-family: 'Red Hat Mono', monospace;
 }
+

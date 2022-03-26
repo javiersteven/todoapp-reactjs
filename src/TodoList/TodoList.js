@@ -1,17 +1,17 @@
 import React from 'react'
+import './TodoList.css'
 
 const todoListStyles = {
-    display: 'flex',
-    flexDirection: 'column',
-    justifyContent: 'center',
-    alignItems: 'center'
+    
 }
 
 const TodoList = ({ children }) => {
     return (
-        <ul style={todoListStyles}>
-            {children}
-        </ul>
+        <div className="TodoList">
+            <ul className="ul">
+                {children}
+            </ul>
+        </div>
     )
 }
 

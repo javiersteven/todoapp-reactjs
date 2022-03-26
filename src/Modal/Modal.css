@@ -32,18 +32,21 @@
     border-radius: 40px;
     cursor: pointer;
     font-weight: bold;
+    font-size: 30px;
     
+    transform: rotate(0);
+    transition: .3s ease;
+
     position: absolute;
     top: 15px;
     right: 15px;
 }
-.modal-content .btn-close span {
-    font-size: 30px;
-}
+
 .modal-content .btn-close:hover {
     background-color: #111;
     border: 2px solid #fff;
     color: #fff;
+    transform: rotate(180deg);
 }
 
 .main-form {

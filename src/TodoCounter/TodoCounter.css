@@ -1,3 +1,7 @@
 .todo-counter {
     text-align: center;
 }
+.todo-counter span {
+    color: #fff;
+    text-decoration: underline;
+}

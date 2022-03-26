@@ -54,8 +54,7 @@ function App() {
     console.log(searchedTodos)
     return (
         <main className="main-app">
-            <Header />
-            <TodoCounter allTodos={todos.length} completed={todosOk} />
+            <Header allTodos={todos.length} completed={todosOk}/>
             <TodoSearch search={search} setSearch={setSearch} />
 
             {error && <p>Hubo un error!</p>}
