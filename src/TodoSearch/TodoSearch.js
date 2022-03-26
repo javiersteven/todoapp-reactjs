@@ -8,7 +8,7 @@ const TodoSearch = ({search, setSearch}) => {
     }
     return (
         <input
-            placeholder="placeholder"
+            placeholder="Search 🔎"
             onChange={handleOnChange}
             value={search}
         />
