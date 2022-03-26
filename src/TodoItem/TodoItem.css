@@ -2,10 +2,11 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    max-width: 400px
+    width: 400px;
+
 }
 .TodoItem p {
-    max-width: 400px;
+    height: auto;
 }
 .Icon {
     cursor: pointer;

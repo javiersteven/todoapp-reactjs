@@ -46,7 +46,12 @@ function App() {
         newTodos.splice(todoIndex, 1)
         saveTodos(newTodos)
     }
-
+    function addTodo(todo) {
+        const newTodo = {tarea: todo, complete: false}
+        const newListTodo = [...searchedTodos, newTodo]
+        saveTodos(newListTodo)
+    }
+    console.log(searchedTodos)
     return (
         <main className="main-app">
             <Header />
@@ -72,7 +77,7 @@ function App() {
             </TodoList>
             <CreateTodoBtn onShow={onShow} show={show} />
             {
-                show && <ModalPortal onClose={onShow} close={show} />
+                show && <ModalPortal saveTodo={addTodo} onClose={onShow} close={show} />
             }
         </main>
     )
