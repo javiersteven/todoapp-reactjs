@@ -3,7 +3,7 @@ import ReactDOM from 'react-dom'
 import { useState } from 'react'
 import './Modal.css'
 import { Formik } from 'formik'
-import firmware from '../assets/img/conceptual.svg'
+import form from '../assets/img/form.svg'
 
 /* 
 Error: Le estaba pasando las props a ModalPortal y no a Modal
@@ -27,7 +27,7 @@ function Modal({ saveTodo, onClose, close, children }) {
                     <h2>FORM</h2>
                     <h2>Añade un TODO!</h2>
                 </header>
-                <img src={firmware} alt='firmware png' />
+                <img src={form} alt='form png' />
                 {children}
                 <form className='main-form' onSubmit={handleSubmit}>
                     <label>Todo</label>

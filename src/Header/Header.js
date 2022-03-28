@@ -5,7 +5,7 @@ import './Header.css'
 const Header = ({allTodos, completed}) => {
     return (
         <header className="title">
-            <h1 className="header-title">TODO's App! 💻</h1>
+            <h1 className="header-title">TODO's App!</h1>
             <TodoCounter 
                 allTodos={allTodos}
                 completed={completed}

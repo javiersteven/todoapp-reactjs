@@ -4,8 +4,11 @@
     align-items: center;
     padding: 15px;
     justify-content: space-around;
-    background-color: #1C73D3;
+    background-color: #007aff;
     text-align: center;
-    font-family: 'Red Hat Mono', monospace;
+    /* font-family: 'Red Hat Mono', monospace; */
+    font-family:  'Alliance No.1', sans-serif;
+    font-feature-settings: "ss02" on,"ss01" on;
+    line-height: 32px;
+    font-weight: 800;
 }
-
