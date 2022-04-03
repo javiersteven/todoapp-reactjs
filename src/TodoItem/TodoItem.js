@@ -1,14 +1,19 @@
 import './TodoItem.css'
 
-const TodoItem = ({ text, completed, onComplete, onDelete }) => {
+const TodoItem = ({ text, completed, onComplete, onDelete}) => {
 
     return (
-        <li className='TodoItem'> 
+        <li className='TodoItem'>
             <span
                 className='Icon'
                 onClick={onComplete}
             >
                 👌
+            </span>
+            <span
+                className='Icon'
+            >
+                🖊
             </span>
             <p className={`${completed && 'Icon--active'}`}>{text}</p>
             <span

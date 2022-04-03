@@ -2,7 +2,6 @@ import React from 'react'
 import ReactDOM from 'react-dom'
 import { useState } from 'react'
 import './Modal.css'
-import { Formik } from 'formik'
 import form from '../assets/img/form.svg'
 
 /* 

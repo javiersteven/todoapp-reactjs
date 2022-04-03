@@ -1,6 +1,7 @@
 .TodoItem {
     display: flex;
-    justify-content: center;
+    justify-self: center;
+    align-self: center;
     align-items: center;
     width: 380px;
     margin: 10px;
@@ -13,7 +14,6 @@
     height: auto;
     width: 100%;
     font-size: 18px;
-
 }
 
 .Icon {

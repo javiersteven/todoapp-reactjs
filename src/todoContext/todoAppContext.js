@@ -3,6 +3,12 @@ import { useLocalStorage } from './useLocalStorage'
 
 const TodoAppContext = createContext()
 
+const defaultTodos = [
+    { tarea: "Hacer la exposición de ISIS", complete: true , id: 0},
+    { tarea: "Realizar la tarea de programación", complete: true, id: 1 },
+    { tarea: "Hacer la tarea de Col: espacio tiempo y dif", complete: false, id: 2 }
+]
+
 const TodoAppContextProvider = ({children}) => {
     // Logica
     const { item: todos, saveItem: saveTodos, loading, error } = useLocalStorage("TODOS-V1", [])
@@ -35,10 +41,15 @@ const TodoAppContextProvider = ({children}) => {
         saveTodos(newTodos)
     }
     function addTodo(todo) {
-        const newTodo = { tarea: todo, complete: false }
+        const newTodo = { tarea: todo, complete: false, id: searchedTodos.length + 1 }
         const newListTodo = [...searchedTodos, newTodo]
         saveTodos(newListTodo)
     }
+    function updateTodo(text) {
+        const todoIndex = todos.findIndex(todo => todo.tarea === text)
+        const newTodos = [...todos]
+    }
+
     return (
         <TodoAppContext.Provider value={{
             todos,
@@ -52,7 +63,7 @@ const TodoAppContextProvider = ({children}) => {
             deleteTodo,
             onShow,
             show,
-            addTodo
+            addTodo,
         }}>
             {children}
         </TodoAppContext.Provider>

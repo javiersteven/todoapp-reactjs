@@ -1,9 +1,6 @@
 import React from 'react'
 import './TodoList.css'
 
-const todoListStyles = {
-    
-}
 
 const TodoList = ({ children }) => {
     return (

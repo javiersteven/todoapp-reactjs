@@ -35,13 +35,13 @@ const AppUI = () => {
             <TodoList>
 
                 {
-                    searchedTodos.map(({ complete, tarea }) => {
+                    searchedTodos.map(({ complete, tarea, id }) => {
                         return <TodoItem
                             text={tarea}
                             completed={complete}
-                            key={tarea}
+                            key={id}
                             onComplete={() => completeTodo(tarea)}
-                            onDelete={() => deleteTodo(tarea)}
+                            onDelete={() => deleteTodo(tarea)}npx 
                         />
                     })
                 }
