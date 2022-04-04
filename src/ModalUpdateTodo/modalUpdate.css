@@ -1,0 +1,27 @@
+.modal-up-wp {
+    background-color: rgba(255, 255, 255, .8);
+    position: fixed;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+}
+
+.modal-up-cnt {
+    background-color: #007aff;
+    color: #111;
+    border: 3px solid #fff;
+
+    height: 80vh;
+    margin: 10vh auto;
+    position: relative;
+    padding: 15px;
+    max-width: 400px;
+    width: 80vw;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+    box-shadow: 0 0 30px 5px rgba(80, 80, 80, .8);
+}

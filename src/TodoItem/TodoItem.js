@@ -1,7 +1,6 @@
 import './TodoItem.css'
 
-const TodoItem = ({ text, completed, onComplete, onDelete}) => {
-
+const TodoItem = ({ text, completed, onComplete, onDelete, setShowModal, showModal, getTodoClicked, setTodoClicked}) => {
     return (
         <li className='TodoItem'>
             <span
@@ -12,6 +11,10 @@ const TodoItem = ({ text, completed, onComplete, onDelete}) => {
             </span>
             <span
                 className='Icon'
+                onClick={() => {
+                    setShowModal(!showModal)
+                    setTodoClicked(getTodoClicked())
+                }}
             >
                 🖊
             </span>

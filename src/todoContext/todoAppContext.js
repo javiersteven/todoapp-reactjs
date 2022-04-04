@@ -3,11 +3,15 @@ import { useLocalStorage } from './useLocalStorage'
 
 const TodoAppContext = createContext()
 
+/* 
+valores de prueba:
+
 const defaultTodos = [
     { tarea: "Hacer la exposición de ISIS", complete: true , id: 0},
     { tarea: "Realizar la tarea de programación", complete: true, id: 1 },
     { tarea: "Hacer la tarea de Col: espacio tiempo y dif", complete: false, id: 2 }
-]
+] 
+*/
 
 const TodoAppContextProvider = ({children}) => {
     // Logica
@@ -15,6 +19,8 @@ const TodoAppContextProvider = ({children}) => {
     const [search, setSearch] = useState('')
     const [show, onShow] = useState(false)
     const todosOk = todos.filter(todo => todo.complete === true).length /* !!todo.complete */
+    const [showModalUpdate, setShowModalUpdate] = useState(false)
+    const [todoClicked, setTodoClicked] = useState()
 
     let searchedTodos = []
 
@@ -27,7 +33,6 @@ const TodoAppContextProvider = ({children}) => {
             return todoText.includes(searchText)
         })
     }
-
     const completeTodo = (texto) => {
         const todoIndex = todos.findIndex(todo => todo.tarea === texto)
         const newTodos = [...todos]
@@ -45,9 +50,15 @@ const TodoAppContextProvider = ({children}) => {
         const newListTodo = [...searchedTodos, newTodo]
         saveTodos(newListTodo)
     }
-    function updateTodo(text) {
-        const todoIndex = todos.findIndex(todo => todo.tarea === text)
-        const newTodos = [...todos]
+    function obtainTodoClicked(id) {
+        const todoIndex = searchedTodos.findIndex(todo => todo.id === id)
+        return searchedTodos[todoIndex]
+    }
+
+    function updateTodos (newTodo) {
+        const todosFilter = searchedTodos.length !== 0 ? searchedTodos.filter(todo => todo.id !== newTodo.id) : 0
+        let newTodos = [...todosFilter, newTodo]
+        saveTodos(newTodos.sort((a, b) => a.id - b.id ))
     }
 
     return (
@@ -64,6 +75,12 @@ const TodoAppContextProvider = ({children}) => {
             onShow,
             show,
             addTodo,
+            showModalUpdate,
+            setShowModalUpdate,
+            setTodoClicked,
+            todoClicked,
+            obtainTodoClicked,
+            updateTodos
         }}>
             {children}
         </TodoAppContext.Provider>

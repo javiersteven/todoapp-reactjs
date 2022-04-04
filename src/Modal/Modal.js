@@ -16,8 +16,8 @@ function Modal({ saveTodo, onClose, close, children }) {
     function handleSubmit(e) {
         e.preventDefault()
         saveTodo(todo)
+        onClose(!close)
         setTodo("")
-        console.log(e)
     }
     return (
         <div className="modal">
@@ -30,7 +30,7 @@ function Modal({ saveTodo, onClose, close, children }) {
                 {children}
                 <form className='main-form' onSubmit={handleSubmit}>
                     <label>Todo</label>
-                    <input value={todo} onChange={handleChange}></input>
+                    <input value={todo} onChange={handleChange} autoFocus></input>
                     <button type="submit">Agregar TODO</button>
                 </form>
                 <button className="btn-close" onClick={() => onClose(!close)}>❌</button>
@@ -47,24 +47,3 @@ export default function ModalPortal({ onClose, saveTodo, close, children }) {
         document.getElementById("modal")
     )
 }
-
-/* 
-<Formik
-                    initialValues={{
-                        todo: ""
-                    }}
-                    onSubmit={({todo}) => {
-                        addTodos(todo)
-                    }}
-                >
-                    {
-                        ({handleSubmit, handleChange}) => (
-                            <form onSubmit={handleSubmit}>
-                                <label>Todo</label>
-                                <input name="todo" onChange={handleChange}></input>
-                                <button type="submit">Agregar TODO</button>
-                            </form>
-                        )
-                    }
-                </Formik>
-*/

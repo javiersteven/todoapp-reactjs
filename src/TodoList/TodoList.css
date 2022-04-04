@@ -1,10 +1,5 @@
 .TodoList {
-    margin: 20px;
+    margin: 20px 0;
     display: flex;
     justify-content: center;
-}
-
-.TodoList .ul {
-    display: grid;
-    grid-template-columns: repeat(2, 400px);
 }
