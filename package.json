@@ -1,6 +1,6 @@
 {
-  "homepage": "http://javiersteven.me/todoapp-reactjs/",
-  "name": "todo-app",
+  "homepage": "http://javiersteven.github.io/todoapp-reactjs/",
+  "name": "todoapp-reactjs",
   "author": "j4viersteven",
   "version": "0.1.0",
   "private": true,
@@ -21,6 +21,7 @@
     "test": "react-scripts test",
     "eject": "react-scripts eject",
     "complexity": "npx code-complexity . --filter '**/*.js' --limit 12 --sort score",
+
     "predeploy": "npm run build",
     "deploy": "gh-pages -d build"
   },
