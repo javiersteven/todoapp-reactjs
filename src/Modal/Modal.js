@@ -2,7 +2,7 @@ import React from 'react'
 import ReactDOM from 'react-dom'
 import { useState } from 'react'
 import './Modal.css'
-import form from '../assets/img/form.svg'
+import add_todo from '../assets/img/add_todo.svg'
 
 /* 
 Error: Le estaba pasando las props a ModalPortal y no a Modal
@@ -23,17 +23,16 @@ function Modal({ saveTodo, onClose, close, children }) {
         <div className="modal">
             <div className="modal-content">
                 <header style={{ textAlign: 'center' }}>
-                    <h2>FORM</h2>
                     <h2>Añade un TODO!</h2>
                 </header>
-                <img src={form} alt='form png' />
+                <img src={add_todo} alt='form png' />
                 {children}
                 <form className='main-form' onSubmit={handleSubmit}>
-                    <label>Todo</label>
+                    <label>Escribe el Todo:</label>
                     <input value={todo} onChange={handleChange} autoFocus></input>
                     <button type="submit">Agregar TODO</button>
                 </form>
-                <button className="btn-close" onClick={() => onClose(!close)}>❌</button>
+                <button className="btn-close" onClick={() => onClose(!close)}>×</button>
             </div>
         </div>
     )

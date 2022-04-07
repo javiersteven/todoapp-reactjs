@@ -39,7 +39,7 @@ const AppUI = () => {
 
             {error && <p>Hubo un error!</p>}
             {loading && <p>Estamos cargando!</p>}
-            {(loading || !searchedTodos.length) && <p>Crea tu TODO</p>}
+            {(loading || !searchedTodos.length) && <p>Añade un TODO</p>}
             <TodoList>
 
                 {

@@ -21,12 +21,14 @@ const ModalUpdate = ({ show, setShow, todoClicked, updateTodos }) => {
     return (
         <div className="modal-up-wp">
             <div className="modal-up-cnt">
-                <h2>Edit Your TODO!</h2>
-                <form onSubmit={handleOnSubmit}>
+                <h2>EDITA EL TODO!</h2>
+                <form className="modal-form" onSubmit={handleOnSubmit}>
                     <label>Todo: </label>
                     <input type="text" value={tarea} onChange={handleOnChange} autoFocus/>
-                    <button type="button" onClick={() => setShow(!show)}>Close</button>
+                    <div className="buttons">
                     <button type="submit">Actualizar Todo</button>
+                    <button type="button" onClick={() => setShow(!show)}>Close</button>
+                    </div>
                 </form>
             </div>
         </div>

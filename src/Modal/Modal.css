@@ -7,11 +7,11 @@
     bottom: 0;
 }
 
+/* #007aff */
 .modal-content {
-    background-color: #007aff;
+    background-color: #fff;
     color: #111;
-    border: 3px solid #fff;
-
+    border: 1px solid #808080;
     height: 80vh;
     margin: 10vh auto;
     position: relative;
@@ -34,10 +34,7 @@
     border-radius: 40px;
     cursor: pointer;
     font-weight: bold;
-    font-size: 30px;
-    
-    transform: rotate(0);
-    transition: .3s ease;
+    font-size: 40px;
 
     position: absolute;
     top: 15px;
@@ -45,10 +42,8 @@
 }
 
 .modal-content .btn-close:hover {
-    background-color: #111;
     border: 2px solid #fff;
-    color: #fff;
-    transform: rotate(180deg);
+    transform: scale(1.1);
 }
 
 .main-form {
@@ -62,7 +57,7 @@
 
 .main-form label {
     left: 5px;
-    width: 68%;
+    width: 69%;
     margin: 5px;
 /*     text-decoration:underline; */
     font-size: 16px;
@@ -70,29 +65,33 @@
 }
 
 .modal-content img {
-    width: 260px;
+    width: 200px;
 }
 
 .main-form input {
     width: 100%;
     margin: 5px;
     text-align: left;
-    padding: 3px;
+    padding: 5px;
+    padding-left: 8px;
+    border-radius: 5px;
 }
 
 .main-form button {
     width: 150px;
-    background-color: #fff;
+    color: #fff;
+    background-color: #111;
     border: 0 #fff;
     height: 35px;
     border-radius: 5px;
     cursor: pointer;
-    margin: 5px;
+    margin: 10px 0;
     font-weight: bold;
 }
 
 .main-form button:hover {
     background-color: #111;
-    border: 2px solid #fff;
+    border: 2px solid #111;
+    transform: scale(1.1);
     color: #fff;
 }
